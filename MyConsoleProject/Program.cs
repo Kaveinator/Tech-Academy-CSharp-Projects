@@ -74,13 +74,34 @@ namespace MyConsoleProject {
             Console.WriteLine($"Does Person 1 make more money than Person 2? {person1Salary > person2Salary}");
             */
 
-            Console.WriteLine("Car Insurance Qualifications");
+            /*Console.WriteLine("Car Insurance Qualifications");
             int age = GetIntFromUser("What is your age", 1, 100); // Req 200.1a
             bool hasDUI = ReadBool("Have you ever had a DUI"); // Req 200.1b
             int ticketsCount = GetIntFromUser("How many speeding tickets do you have", 0, 100); // Req 200.1c
             bool meetsQualifications = age > 15 && !hasDUI && ticketsCount <= 3;// Req 200.2a, 200.2b, 200.2c
             Console.WriteLine($"Qualified: {meetsQualifications}"); // Req 200.3
+            */
+
+            RunPackageExpress();
             Console.Read();
+        }
+
+        static void RunPackageExpress() {
+            Console.WriteLine("Welcome to Package Express. Please follow the instructions below."); // Req 223.1
+            decimal pkgWeight = GetDecimalFromUser("What is the weight", 0.1m, 999); // Req 223.2
+            if (pkgWeight > 50) { // Req 223.3
+                Console.WriteLine("Package is too heavy to be shipped via Package Express. Have a good day");
+                return;
+            }
+            decimal pkgWidth = GetDecimalFromUser("Width of package: ", 0.01m, 100), // Req 223.4
+                pkgHeight = GetDecimalFromUser("Height of package: ", 0.01m, 100),   // Req 223.5
+                pkgLength = GetDecimalFromUser("Length of package: ", 0.01m, 100);   // Req 223.6
+            if (pkgWidth + pkgHeight + pkgLength > 50) { // Req 223.7
+                Console.WriteLine("Package is too big to be shipped via Package Express. Have a good day");
+                return;
+            }
+            decimal shipQuote = (pkgWidth * pkgHeight * pkgLength * pkgWeight) / 100m; // Req 223.8, 223.9
+            Console.WriteLine($"Estimated cost to ship this package is ${shipQuote:0.00}"); // Req 223.10
         }
 
         /// <summary>Asks the user for a int number, if parse fails, it asks again</summary>
@@ -90,6 +111,18 @@ namespace MyConsoleProject {
             string parseStr = null;
             int outValue;
             while (parseStr == null || !(int.TryParse(parseStr, out outValue) && minValue <= outValue && outValue <= maxValue)) {
+                Console.Write($"{prompt}: ({minValue} - {maxValue}) ");
+                parseStr = Console.ReadLine();
+            }
+            return outValue;
+        }
+        /// <summary>Asks the user for a int number, if parse fails, it asks again</summary>
+        /// <param name="prompt">What are you askng for?</param>
+        /// <returns>A int value based on user input</returns>
+        static decimal GetDecimalFromUser(string prompt = "Enter a number", decimal minValue = decimal.MinValue, decimal maxValue = decimal.MaxValue) {
+            string parseStr = null;
+            decimal outValue;
+            while (parseStr == null || !(decimal.TryParse(parseStr, out outValue) && minValue <= outValue && outValue <= maxValue)) {
                 Console.Write($"{prompt}: ({minValue} - {maxValue}) ");
                 parseStr = Console.ReadLine();
             }
