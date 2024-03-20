@@ -62,6 +62,7 @@ namespace MyConsoleProject {
             Console.WriteLine($"{userValue = GetIntFromUser()} / 7 = {userValue / 7}");       // Req 186.5
             */
 
+            /*
             Console.WriteLine("# Anoymous Income Comparison Program\nPerson 1");
             int hourlyRate = GetIntFromUser("Hourly Rate", 0, 100),
                 hoursPerWeek = GetIntFromUser("Hours worked per week", 0, 80),
@@ -71,6 +72,14 @@ namespace MyConsoleProject {
             hoursPerWeek = GetIntFromUser("Hours worked per week", 0, 80);
             int person2Salary = hourlyRate * hoursPerWeek * 52;
             Console.WriteLine($"Does Person 1 make more money than Person 2? {person1Salary > person2Salary}");
+            */
+
+            Console.WriteLine("Car Insurance Qualifications");
+            int age = GetIntFromUser("What is your age", 1, 100); // Req 200.1a
+            bool hasDUI = ReadBool("Have you ever had a DUI"); // Req 200.1b
+            int ticketsCount = GetIntFromUser("How many speeding tickets do you have", 0, 100); // Req 200.1c
+            bool meetsQualifications = age > 15 && !hasDUI && ticketsCount <= 3;// Req 200.2a, 200.2b, 200.2c
+            Console.WriteLine($"Qualified: {meetsQualifications}"); // Req 200.3
             Console.Read();
         }
 
@@ -83,6 +92,22 @@ namespace MyConsoleProject {
             while (parseStr == null || !(int.TryParse(parseStr, out outValue) && minValue <= outValue && outValue <= maxValue)) {
                 Console.Write($"{prompt}: ({minValue} - {maxValue}) ");
                 parseStr = Console.ReadLine();
+            }
+            return outValue;
+        }
+        /// <summary>Asks the user for a bool value, if parse fails, it asks again, if an empty string is passed it will try returning a suggested value (when supplied)</summary>
+        /// <param name="prompt">What are you asking for?</param>
+        /// <param name="suggestedValue">The value returned if the user doesn't enter any data</param>
+        /// <returns>A true/false value from user input or fallback value</returns>
+        static bool ReadBool(string prompt = "Enter a number", bool? suggestedValue = null) {
+            string parseStr = null,
+                options = suggestedValue.HasValue ? $"({(suggestedValue.Value ? "True/false" : "true/False")})" : "true/false";
+            bool outValue;
+            while (parseStr == null || !bool.TryParse(parseStr, out outValue)) {
+                Console.Write($"{prompt}: ({options}) ");
+                parseStr = Console.ReadLine();
+                if (string.IsNullOrEmpty(parseStr) && suggestedValue.HasValue)
+                    return suggestedValue.Value;
             }
             return outValue;
         }
