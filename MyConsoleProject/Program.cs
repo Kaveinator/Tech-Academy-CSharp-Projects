@@ -54,23 +54,34 @@ namespace MyConsoleProject {
                 $"{("a" + 2)}" // Req 178
             );*/
 
-            int userValue;
+            /*int userValue;
             Console.WriteLine($"{userValue = GetIntFromUser()} * 50 = {userValue * 50}");     // Req 186.1
             Console.WriteLine($"{userValue = GetIntFromUser()} + 25 = {userValue + 25}");     // Req 186.2
             Console.WriteLine($"{userValue = GetIntFromUser()} / 12.5 = {userValue / 12.5}"); // Req 186.3
             Console.WriteLine($"{userValue = GetIntFromUser()} > 50 = {userValue > 50}");     // Req 186.4
             Console.WriteLine($"{userValue = GetIntFromUser()} / 7 = {userValue / 7}");       // Req 186.5
+            */
+
+            Console.WriteLine("# Anoymous Income Comparison Program\nPerson 1");
+            int hourlyRate = GetIntFromUser("Hourly Rate", 0, 100),
+                hoursPerWeek = GetIntFromUser("Hours worked per week", 0, 80),
+                person1Salary = hourlyRate * hoursPerWeek * 52;
+            Console.WriteLine("Person 2");
+            hourlyRate = GetIntFromUser("Hourly Rate", 0, 100);
+            hoursPerWeek = GetIntFromUser("Hours worked per week", 0, 80);
+            int person2Salary = hourlyRate * hoursPerWeek * 52;
+            Console.WriteLine($"Does Person 1 make more money than Person 2? {person1Salary > person2Salary}");
             Console.Read();
         }
 
         /// <summary>Asks the user for a int number, if parse fails, it asks again</summary>
         /// <param name="prompt">What are you askng for?</param>
         /// <returns>A int value based on user input</returns>
-        static int GetIntFromUser(string prompt = "Enter a number") {
+        static int GetIntFromUser(string prompt = "Enter a number", int minValue = int.MinValue, int maxValue = int.MaxValue) {
             string parseStr = null;
             int outValue;
-            while (parseStr == null || !int.TryParse(parseStr, out outValue)) {
-                Console.Write($"{prompt}: ({int.MinValue} - {int.MaxValue}) ");
+            while (parseStr == null || !(int.TryParse(parseStr, out outValue) && minValue <= outValue && outValue <= maxValue)) {
+                Console.Write($"{prompt}: ({minValue} - {maxValue}) ");
                 parseStr = Console.ReadLine();
             }
             return outValue;
