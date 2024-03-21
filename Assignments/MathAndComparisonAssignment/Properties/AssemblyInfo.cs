@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("MyConsoleProject")]
+[assembly: AssemblyTitle("MathAndComparisonAssignment")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("KeyFire Studios")]
-[assembly: AssemblyProduct("MyConsoleProject")]
+[assembly: AssemblyProduct("MathAndComparisonAssignment")]
 [assembly: AssemblyCopyright("Copyright © KeyFire Studios 2024")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("3a89355e-c781-406b-bea6-edf404079e17")]
+[assembly: Guid("cdd60912-111b-4844-9ccd-0fd3438d93c7")]
 
 // Version information for an assembly consists of the following four values:
 //

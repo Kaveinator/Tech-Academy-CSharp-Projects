@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3A89355E-C781-406B-BEA6-EDF404079E17}</ProjectGuid>
+    <ProjectGuid>{C76C9BC5-B78C-411E-B859-6819440DE431}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>MyConsoleProject</RootNamespace>
-    <AssemblyName>MyConsoleProject</AssemblyName>
+    <RootNamespace>DailyReportAssignment</RootNamespace>
+    <AssemblyName>DailyReportAssignment</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Assignments\Assignments.csproj">
+      <Project>{5ae7f634-2354-46d1-a037-229b9f7f6b70}</Project>
+      <Name>Assignments</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
