@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C76C9BC5-B78C-411E-B859-6819440DE431}</ProjectGuid>
+    <ProjectGuid>{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>DailyReportAssignment</RootNamespace>
-    <AssemblyName>DailyReportAssignment</AssemblyName>
+    <RootNamespace>WhileAndDoWhile</RootNamespace>
+    <AssemblyName>WhileAndDoWhile</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleUtil.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

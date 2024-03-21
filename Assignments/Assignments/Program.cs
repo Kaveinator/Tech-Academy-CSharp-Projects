@@ -9,6 +9,7 @@ namespace Assignments {
         internal static readonly List<IAssignment> Assignments;
         
         static Program() {
+            // Index all assignments
             Assignments = new List<IAssignment>(
                 AppDomain.CurrentDomain.GetAssemblies() // Get all projects
                 .SelectMany(assembly => assembly.GetTypes()) // Select many, to select multiple types per assembly
@@ -28,18 +29,21 @@ namespace Assignments {
                 assignmentsListings.AppendFormat("\n  {0}: Step {1}: {2}", ++i, assignment.Step, assignment.Name);
             }
             assignmentsListings.AppendLine();
-            assignmentsListings = assignmentsListings.ToString();
+            assignmentsListings = assignmentsListings.ToString(); // Now assignmentsListing is a string and will be used as such
+            // The loop breaks when exit is selected (index 0)
             while (true) {
                 //TestReadNumeral();
-                Console.Clear();
+                Console.Clear(); // Clear out any previous output
                 Console.Title = "Select Assignment";
                 Console.WriteLine(assignmentsListings);
+
                 ushort selectedIndex = ReadNumeral<ushort>("Index", 0, (ushort)Assignments.Count);
-                if (selectedIndex-- == 0) break;
-                Console.Clear();
-                Run(Assignments[selectedIndex]);
+                if (selectedIndex-- == 0) break; // If selected index is 0, break, this line also subtracts one from selectedIndex so it can be used to get an array item
+
+                Console.Clear(); // Clear console to run an assignment
+                Run(Assignments[selectedIndex]); // Run said assignment
                 Console.Write("\nPress any key to list all assignments...");
-                _ = Console.ReadKey(intercept: true);
+                _ = Console.ReadKey(intercept: true); // After the assignment finishes, wait for a keypress before looping back, the intercept flag prevents the key from being visible in the console
             }
         }
 

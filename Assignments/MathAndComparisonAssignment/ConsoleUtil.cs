@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assignments {
+namespace MathAndComparisonAssignment {
     public static class ConsoleUtil {
         /// <summary>Gets a parses a number from the console, you need to specify the min/max values since defaults are 0</summary>
         /// <typeparam name="T">The type of number to return</typeparam>
@@ -16,7 +16,8 @@ namespace Assignments {
             do {
                 Console.Write($"{prompt}: ({minValue} - {maxValue}) ");
                 parseStr = Console.ReadLine();
-            } while (!(TryParse<T>(parseStr, out outValue) && minValue.CompareTo(outValue) <= 0 && maxValue.CompareTo(outValue) >= 0));
+            }
+            while (!(TryParse<T>(parseStr, out outValue) && minValue.CompareTo(outValue) <= 0 && maxValue.CompareTo(outValue) >= 0));
             return outValue;
         }
 
@@ -25,8 +26,9 @@ namespace Assignments {
             try {
                 result = (T)Convert.ChangeType(input, typeof(T));
                 return true;
-            } catch { }
-            return false;
+            }
+            catch { }
+            return false; 
         }
     }
 }

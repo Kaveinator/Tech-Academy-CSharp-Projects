@@ -7,13 +7,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DailyReportAssignment", "Da
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleMathAssignment", "ConsoleMathAssignment\ConsoleMathAssignment.csproj", "{6800FD46-65FE-401A-96B1-B7B5C9DF0238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assignments", "Assignments\Assignments.csproj", "{5AE7F634-2354-46D1-A037-229B9F7F6B70}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooleanLogicAssignment", "BooleanLogicAssignment\BooleanLogicAssignment.csproj", "{E27547EA-9BE1-45FB-8C7E-6B22FCE5DB24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BranchingAssignment", "BranchingAssignment\BranchingAssignment.csproj", "{D7CDDBEE-BA09-42E6-B92D-6D0296D2AD29}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAndComparisonAssignment", "MathAndComparisonAssignment\MathAndComparisonAssignment.csproj", "{CDD60912-111B-4844-9CCD-0FD3438D93C7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileAndDoWhile", "WhileAndDoWhile\WhileAndDoWhile.csproj", "{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,10 +29,6 @@ Global
 		{6800FD46-65FE-401A-96B1-B7B5C9DF0238}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6800FD46-65FE-401A-96B1-B7B5C9DF0238}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6800FD46-65FE-401A-96B1-B7B5C9DF0238}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5AE7F634-2354-46D1-A037-229B9F7F6B70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5AE7F634-2354-46D1-A037-229B9F7F6B70}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5AE7F634-2354-46D1-A037-229B9F7F6B70}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5AE7F634-2354-46D1-A037-229B9F7F6B70}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E27547EA-9BE1-45FB-8C7E-6B22FCE5DB24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E27547EA-9BE1-45FB-8C7E-6B22FCE5DB24}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E27547EA-9BE1-45FB-8C7E-6B22FCE5DB24}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -45,6 +41,10 @@ Global
 		{CDD60912-111B-4844-9CCD-0FD3438D93C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CDD60912-111B-4844-9CCD-0FD3438D93C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CDD60912-111B-4844-9CCD-0FD3438D93C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

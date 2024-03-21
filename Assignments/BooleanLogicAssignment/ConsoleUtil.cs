@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Assignments {
+namespace BooleanLogicAssignment {
     public static class ConsoleUtil {
         /// <summary>Gets a parses a number from the console, you need to specify the min/max values since defaults are 0</summary>
         /// <typeparam name="T">The type of number to return</typeparam>
