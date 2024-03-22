@@ -15,6 +15,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MathAndComparisonAssignment
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WhileAndDoWhile", "WhileAndDoWhile\WhileAndDoWhile.csproj", "{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringAssignment", "StringAssignment\StringAssignment.csproj", "{8DF4C05D-0037-44C9-8CA4-D9DD4C6B4780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraySubmittion", "ArraySubmittion\ArraySubmittion.csproj", "{1F970630-1F88-4699-851F-E9A23107D302}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01C1E3F0-C8C4-4220-8CA1-B8BB8DB26F17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DF4C05D-0037-44C9-8CA4-D9DD4C6B4780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DF4C05D-0037-44C9-8CA4-D9DD4C6B4780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DF4C05D-0037-44C9-8CA4-D9DD4C6B4780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DF4C05D-0037-44C9-8CA4-D9DD4C6B4780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1F970630-1F88-4699-851F-E9A23107D302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1F970630-1F88-4699-851F-E9A23107D302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1F970630-1F88-4699-851F-E9A23107D302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1F970630-1F88-4699-851F-E9A23107D302}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
