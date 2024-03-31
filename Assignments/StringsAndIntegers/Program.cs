@@ -7,7 +7,7 @@ using static System.Double;
 
 namespace StringsAndIntegers {
     internal class Program {
-        readonly static int[] Integers = new[] { 0, 1, -2, 3, 4, 5, 6, 7, 8, 9, 0}; // Req 264.1
+        readonly static List<int> Integers = new List<int>() { 0, 1, -2, 3, 4, 5, 6, 7, 8, 9, 0}; // Req 264.1
         static void Main(string[] args) {
             // Loop over each integer
             foreach (int num in Integers) { // num => numerator
