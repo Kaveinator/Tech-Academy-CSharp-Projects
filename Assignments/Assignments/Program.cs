@@ -5,6 +5,11 @@ using System.Text;
 using static Assignments.ConsoleUtil;
 
 namespace Assignments {
+    /// <summary>
+    /// A project I made to help with grading to TTA, and make all short,
+    /// assignments be in a single project. Unfortunatly this was rejected
+    /// and got lectured that I wasn't supposed to do that go figure
+    /// </summary>
     public class Program {
         internal static readonly List<IAssignment> Assignments;
         
