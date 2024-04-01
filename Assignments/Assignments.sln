@@ -39,6 +39,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassAssignment", "ClassAss
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MethodsAndObjectsAssignment", "MethodsAndObjectsAssignment\MethodsAndObjectsAssignment.csproj", "{46E4A81C-998F-4C99-9770-52732BCE0BE6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AbstractClassAssignment", "AbstractClassAssignment\AbstractClassAssignment.csproj", "{88B6E04D-03D7-431E-946C-D42A18B45FA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolymorphismAssignment", "PolymorphismAssignment\PolymorphismAssignment.csproj", "{0C0641AE-82B2-41E4-B0A4-9EA87C9C8A20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +121,14 @@ Global
 		{46E4A81C-998F-4C99-9770-52732BCE0BE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{46E4A81C-998F-4C99-9770-52732BCE0BE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{46E4A81C-998F-4C99-9770-52732BCE0BE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88B6E04D-03D7-431E-946C-D42A18B45FA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88B6E04D-03D7-431E-946C-D42A18B45FA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88B6E04D-03D7-431E-946C-D42A18B45FA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88B6E04D-03D7-431E-946C-D42A18B45FA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0641AE-82B2-41E4-B0A4-9EA87C9C8A20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0641AE-82B2-41E4-B0A4-9EA87C9C8A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0641AE-82B2-41E4-B0A4-9EA87C9C8A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0641AE-82B2-41E4-B0A4-9EA87C9C8A20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
