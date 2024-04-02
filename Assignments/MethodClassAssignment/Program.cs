@@ -8,9 +8,9 @@ namespace MethodClassAssignment {
     internal class Program {
         static void Main(string[] args) {
             DummyClass dummy = new DummyClass();
-            dummy.Method1(123, 456);
+            dummy.Method1(i: 123, o: 456);
 
-            Console.ReadKey(true);
+            Console.ReadKey(intercept: true);
         }
 
         /// <summary>Gets a parses a number from the console, you need to specify the min/max values since defaults are 0</summary>
