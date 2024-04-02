@@ -16,14 +16,15 @@ namespace LambdaAssignment {
                 }.Select(firstName => new Employee(counter++, firstName, "Doe"))
             );
             // Foreach all names that are Joe
+            List<Employee> Joes = new List<Employee>();
             foreach (Employee employee in employees)
                 if (employee.FirstName == "Joe")
-                    employee.SayName();
+                    Joes.Add(employee);
 
             // Linq all names that are Joe
-            employees.Where(e => e.FirstName == "Joe").Do(e => e.SayName());
+            Joes = new List<Employee>(employees.Where(e => e.FirstName == "Joe"));
 
-            _ = employees.Where(e => e.Id > 5); // Id greater than 5
+            List<Employee> over5 = employees.Where(e => e.Id > 5).ToList(); // Id greater than 5
 
             Console.ReadKey(true);
         }
