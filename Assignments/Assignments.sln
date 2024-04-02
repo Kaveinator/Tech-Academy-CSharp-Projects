@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParsingEnumsAssignment", "P
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StructAssignment", "StructAssignment\StructAssignment.csproj", "{69EA4D8B-E851-4A93-893E-8AF16B065D07}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LambdaAssignment", "LambdaAssignment\LambdaAssignment.csproj", "{688EE174-6FAC-4F17-BBAE-1961902AC0B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{69EA4D8B-E851-4A93-893E-8AF16B065D07}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69EA4D8B-E851-4A93-893E-8AF16B065D07}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69EA4D8B-E851-4A93-893E-8AF16B065D07}.Release|Any CPU.Build.0 = Release|Any CPU
+		{688EE174-6FAC-4F17-BBAE-1961902AC0B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{688EE174-6FAC-4F17-BBAE-1961902AC0B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{688EE174-6FAC-4F17-BBAE-1961902AC0B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{688EE174-6FAC-4F17-BBAE-1961902AC0B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
