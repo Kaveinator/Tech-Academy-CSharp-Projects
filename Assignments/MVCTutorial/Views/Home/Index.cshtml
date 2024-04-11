@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@model MVCTutorial.Models.User
+
+@foreach (object str in new object[] {
+  Model.Id,
+  Model.FirstName,
+  Model.LastName,
+  Model.Age
+}) {
+    <h1>@str</h1>
+}
