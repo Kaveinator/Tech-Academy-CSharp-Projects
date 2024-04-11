@@ -1,0 +1,15 @@
+﻿@using TechAcadStudentsMVC.Models;
+@model List<Instructor>
+@{
+  ViewBag.Title = $"Instructors";
+}
+
+<h2>Instructors</h2>
+
+<ul>
+  @{
+    foreach (Instructor i in Model) {
+      <li><a href="./Instructor/@i.Id">@i.FirstName, @i.LastName</a></li>
+    }
+  }
+</ul>

@@ -1,0 +1,17 @@
+﻿@model TechAcadStudentsMVC.Models.Instructor
+@{
+    ViewBag.Title = $"Instructor #{Model.Id}";
+}
+
+<h2>Instructor</h2>
+
+<h5>
+  Details for Instructor #@Model.Id
+</h5>
+<p>
+  Further details:
+  <ul>
+    <li>First Name: @Model.FirstName</li>
+    <li>Last Name: @Model.LastName</li>
+  </ul>
+</p>
