@@ -96,7 +96,7 @@ namespace Blackjack {
             
             }
 
-            finish:
+            //finish:
             foreach (var group in Players.Where(player => player.State != BlackjackState.Busted && player != Dealer).GroupBy(player => CompareHands(player, Dealer))) {
                 switch (group.Key) {
                     case null:

@@ -1,10 +1,13 @@
-﻿using NewsletterMVC.Data;
+﻿using NewsletterMVC;
+using NewsletterMVC.Data;
+using NewsletterMVC.Models;
 using NewsletterMVC.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text.RegularExpressions;
 using System.Web;
 using System.Web.Mvc;
@@ -52,35 +55,32 @@ namespace NewsletterMVC.Controllers {
             if (!firstNameValid || !lastNameValid || !emailAddressValid)
                 return View("~/Views/Shared/Error.cshtml");
 
-            SqlConnection connection = NewsletterDatabaseConnectionHandler.GetOrCreate().Connection;
-            const string appendQuery = "INSERT INTO NewsletterSubscribers(FirstName, LastName, EmailAddress, SecretKey) " +
+            /*SqlConnection connection = NewsletterDatabaseConnectionHandler.GetOrCreate().Connection;
+            const string appendQuery = "INSERT INTO NewsletterSubscribers(FirstName, LastName, EmailAddress) " +
                 "VALUES(@firstName, @lastName, @emailAddress, @secretKey);";
             SqlCommand cmd = new SqlCommand(appendQuery, connection);
             foreach (var parameter in new (string, SqlDbType, object)[] {
                     ("@firstName",     SqlDbType.VarChar, firstName ),
                     ("@lastName",      SqlDbType.VarChar, lastName ),
-                    ("@emailAddress",  SqlDbType.VarChar, emailAddress),
-                    ("@emailAddress",  SqlDbType.VarChar, emailAddress),
-                    ("secretKey",      SqlDbType.VarChar, Guid.NewGuid().ToString().Substring(0, 16))
+                    ("@emailAddress",  SqlDbType.VarChar, emailAddress)
             }) {
                 cmd.Parameters.Add(new SqlParameter(parameter.Item1, parameter.Item2) {
                     Value = parameter.Item3
                 });
             }
             cmd.ExecuteNonQuery();
-            return View(nameof(Success));
-        }
+            return View(nameof(Success));*/
 
-        public ActionResult Admin() {
-            SqlConnection connection = NewsletterDatabaseConnectionHandler.GetOrCreate().Connection;
-            const string queryString = "SELECT * FROM NewsletterSubscribers";
-            var entries = new List<PublicNewsletterSubscriberVm>();
-            using (SqlCommand cmd = new SqlCommand(queryString, connection)) {
-                SqlDataReader reader = cmd.ExecuteReader();
-                while (reader.Read())
-                    entries.Add(new PublicNewsletterSubscriberVm(reader));
+            // EF Implementation
+            using (var db = new NewsletterEntities()) {
+                db.NewsletterSubscribers.Add(new NewsletterSubscriber() {
+                    FirstName = firstName,
+                    LastName = lastName,
+                    EmailAddress = emailAddress
+                });
+                db.SaveChanges();
+                return View(nameof(Success));
             }
-            return View(entries);
         }
 
         public ActionResult Success() => View();
