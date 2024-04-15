@@ -51,7 +51,7 @@ namespace CarInsurance.Controllers {
                 insuree.Quote *= multiplier;
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
-                return RedirectToAction(nameof(AdminController.Index), "Admin");
+                return RedirectToAction(nameof(Index));
             }
 
             return View(insuree);
@@ -97,7 +97,7 @@ namespace CarInsurance.Controllers {
             Insuree insuree = db.Insurees.Find(id);
             db.Insurees.Remove(insuree);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index));
         }
 
         protected override void Dispose(bool disposing) {
