@@ -1,0 +1,24 @@
+﻿@using NewsletterMVC.ViewModels;
+@model List<PublicNewsletterSubscriberVm>
+@{
+    ViewBag.Title = "Admin";
+}
+
+<h2>Newsletter Info</h2>
+
+<div class="row no-gutters m-3">
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Newletter Subscribers</h5>
+        </div>
+        <div class="card-body">
+            @foreach (PublicNewsletterSubscriberVm entry in Model) {
+                <div class="row">
+                    <div class="col">@entry.FirstName</div>
+                    <div class="col">@entry.LastName</div>
+                    <div class="col">@entry.EmailAddress</div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
