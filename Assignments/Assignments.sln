@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TechAcadStudentsMVC", "Tech
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NewsletterMVC", "NewsletterMVC\NewsletterMVC.csproj", "{7E3D2944-13D7-4F2F-AF6F-6C32ADB61793}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CarInsurance", "CarInsurance\CarInsurance.csproj", "{EBECF709-422B-46FC-A68C-E46E9905AD7C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -213,6 +215,10 @@ Global
 		{7E3D2944-13D7-4F2F-AF6F-6C32ADB61793}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7E3D2944-13D7-4F2F-AF6F-6C32ADB61793}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7E3D2944-13D7-4F2F-AF6F-6C32ADB61793}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBECF709-422B-46FC-A68C-E46E9905AD7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBECF709-422B-46FC-A68C-E46E9905AD7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBECF709-422B-46FC-A68C-E46E9905AD7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBECF709-422B-46FC-A68C-E46E9905AD7C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
