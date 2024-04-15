@@ -47,11 +47,11 @@ namespace CarInsurance.Controllers {
                 insuree.Quote += Math.Max(insuree.SpeedingTickets, 0) * 10; // Req 517.1i: +10/m per ticket
                 decimal multiplier = 1;
                 insuree.Quote *= insuree.DUI ? 1.25m : 1m; // Req 517.1j: if DUI, add 25%
-                insuree.Quote *= insuree.CoverageType ? 0.50m : 0m; // Req 517.1j: if Full Coverage, add 50%
+                insuree.Quote *= insuree.CoverageType ? 1.50m : 1m; // Req 517.1j: if Full Coverage, add 50%
                 insuree.Quote *= multiplier;
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
-                return RedirectToAction(nameof(AdminController.Index), nameof(AdminController));
+                return RedirectToAction(nameof(AdminController.Index), "Admin");
             }
 
             return View(insuree);
