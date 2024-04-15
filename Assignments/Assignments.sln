@@ -77,6 +77,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Scores", "Scores\Scores.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreASPMVC", "NetCoreASPMVC\NetCoreASPMVC.csproj", "{06E12473-72C2-49DD-A04E-0418CC26846C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServerLocalTimeMVC", "ServerLocalTimeMVC\ServerLocalTimeMVC.csproj", "{FA2AE869-7262-4E8D-B7F9-E1CEC923C175}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -231,6 +233,10 @@ Global
 		{06E12473-72C2-49DD-A04E-0418CC26846C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06E12473-72C2-49DD-A04E-0418CC26846C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06E12473-72C2-49DD-A04E-0418CC26846C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA2AE869-7262-4E8D-B7F9-E1CEC923C175}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA2AE869-7262-4E8D-B7F9-E1CEC923C175}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA2AE869-7262-4E8D-B7F9-E1CEC923C175}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA2AE869-7262-4E8D-B7F9-E1CEC923C175}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
