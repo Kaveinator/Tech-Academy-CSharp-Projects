@@ -44,10 +44,10 @@ namespace CarInsurance.Controllers {
                 insuree.Quote += insuree.CarMake.Equals("Porsche", StringComparison.CurrentCultureIgnoreCase)
                     ? insuree.CarModel.Equals("911 Carrera", StringComparison.CurrentCultureIgnoreCase)
                     ? 50 : 25 : 0;
-                insuree.Quote += Math.Min(insuree.SpeedingTickets, 0) * 10; // Req 517.1i: +10/m per ticket
+                insuree.Quote += Math.Max(insuree.SpeedingTickets, 0) * 10; // Req 517.1i: +10/m per ticket
                 decimal multiplier = 1;
-                multiplier += insuree.DUI ? 0.25m : 0m; // Req 517.1j: if DUI, add 25%
-                multiplier += insuree.CoverageType ? 0.50m : 0m; // Req 517.1j: if Full Coverage, add 50%
+                insuree.Quote *= insuree.DUI ? 1.25m : 1m; // Req 517.1j: if DUI, add 25%
+                insuree.Quote *= insuree.CoverageType ? 0.50m : 0m; // Req 517.1j: if Full Coverage, add 50%
                 insuree.Quote *= multiplier;
                 db.Insurees.Add(insuree);
                 db.SaveChanges();
